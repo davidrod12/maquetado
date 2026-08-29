@@ -1,0 +1,229 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+nav {
+    background-color: #162d5f;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f3c88;
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.introduccion {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* =========================
+   GRID DE PROYECTOS
+========================= */
+
+.contenedor-proyectos {
+    display: grid;
+
+    /* 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    /* Sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #1f3c88;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    margin-bottom: 15px;
+}
+
+.tarjeta span {
+    background-color: #1f3c88;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.habilidades div {
+    background-color: white;
+    padding: 25px;
+    border-left: 5px solid #1f3c88;
+    border-radius: 5px;
+}
+
+.habilidades h3 {
+    color: #1f3c88;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #162d5f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   TABLET
+   2 COLUMNAS
+========================= */
+
+@media (max-width: 900px) {
+
+    .contenedor-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+   CELULAR
+   1 COLUMNA
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contenedor-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+}
